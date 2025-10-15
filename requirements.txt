@@ -1,0 +1,8 @@
+# For advanced packet capture (future enhancement)
+scapy==2.5.0
+
+# For additional GUI features (future enhancement)
+customtkinter==5.2.2
+
+# For better logging (future enhancement)
+rich==13.7.0
