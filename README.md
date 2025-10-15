@@ -1,5 +1,3 @@
-Updated README.md
-markdown
 # Telecom Protocol Analyzer
 
 A Python-based GUI application for analyzing and testing telecom protocols (GTP/SCTP) for security vulnerabilities in telecom infrastructure.
@@ -14,11 +12,11 @@ A Python-based GUI application for analyzing and testing telecom protocols (GTP/
 ## 🚀 Features
 
 ### Protocol Support
-- **GTP (GPRS Tunneling Protocol)** Analysis
+- **GTP (GPRS Tunneling Protocol) Analysis**
   - GTPv1 and GTPv2 message parsing
   - Echo request/response monitoring
   - PDP context management analysis
-- **SCTP (Stream Control Transmission Protocol)** Analysis
+- **SCTP (Stream Control Transmission Protocol) Analysis**
   - Chunk type identification (INIT, DATA, SACK, etc.)
   - Verification tag validation
   - Association management monitoring
@@ -57,173 +55,117 @@ A Python-based GUI application for analyzing and testing telecom protocols (GTP/
 ```bash
 git clone https://github.com/ltsali8220/telecom-protocol-analyzer.git
 cd telecom-protocol-analyzer
-Running the Application
-bash
+```
+
+### Running the Application
+```bash
 python telecom_protocol_analyzer.py
-📖 Usage
-Basic Operation
-Configure Target
+```
 
-Enter target IP address (e.g., 127.0.0.1 for testing)
+## 📖 Usage
 
-Set port number (default: 2123 for GTP)
+### Basic Operation
 
-Select Protocol
+#### Configure Target
+- Enter target IP address (e.g., `127.0.0.1` for testing)
+- Set port number (default: `2123` for GTP)
 
-Choose between GTP or SCTP analysis
+#### Select Protocol
+- Choose between GTP or SCTP analysis
 
-Choose Analysis Type
+#### Choose Analysis Type
+- **Passive Monitoring**: Observes traffic without interaction
+- **Active Scanning**: Sends test packets to identify vulnerabilities
+- **Fuzz Testing**: Sends malformed packets to test protocol robustness
+- **Vulnerability Assessment**: Comprehensive security scan
 
-Passive Monitoring: Observes traffic without interaction
+#### Start Analysis
+- Click **Start Analysis** to begin monitoring
+- View real-time results in different tabs
+- Use **Stop Analysis** to halt the process
 
-Active Scanning: Sends test packets to identify vulnerabilities
+### Interpreting Results
 
-Fuzz Testing: Sends malformed packets to test protocol robustness
+#### Packet Analysis Log
+- `INFO`: Normal protocol activity
+- `WARNING`: Suspicious patterns detected
+- `ALERT`: Potential security issues
+- `ERROR`: Protocol violations or errors
 
-Vulnerability Assessment: Comprehensive security scan
+#### Vulnerability Report
+- `LOW`: Minor issues requiring monitoring
+- `MEDIUM`: Issues that should be addressed
+- `HIGH`: Significant security concerns
+- `CRITICAL`: Immediate action required
 
-Start Analysis
+## 🔒 Security Testing Scenarios
 
-Click "Start Analysis" to begin monitoring
+### GTP-Specific Tests
+- **Message Type Validation**: Verify supported GTP message types, detect unsupported or malformed messages
+- **Sequence Number Analysis**: Identify sequence number prediction attempts, detect replay attacks
+- **Tunnel Management**: Monitor PDP context creation/deletion, detect unauthorized tunnel establishment
 
-View real-time results in different tabs
+### SCTP-Specific Tests
+- **Chunk Validation**: Verify chunk type and flag combinations, detect malformed chunk headers
+- **Association Security**: Monitor INIT chunk parameters, detect association hijacking attempts
+- **Flow Control Analysis**: Identify congestion control manipulation, detect resource exhaustion attacks
 
-Use "Stop Analysis" to halt the process
+## 💼 Use Cases
 
-Interpreting Results
-Packet Analysis Log
-INFO: Normal protocol activity
+### Telecom Security Teams
+- Pre-deployment Testing: Validate protocol implementations before production deployment
+- Incident Response: Analyze suspicious network traffic during security incidents
+- Compliance Auditing: Verify adherence to 3GPP security standards
 
-WARNING: Suspicious patterns detected
+### Penetration Testers
+- Red Team Exercises: Identify vulnerabilities in telecom infrastructure
+- Security Assessment: Comprehensive testing of GTP/SCTP implementations
 
-ALERT: Potential security issues
+### Network Engineers
+- Protocol Debugging: Identify and troubleshoot protocol issues
+- Performance Monitoring: Analyze protocol efficiency and reliability
 
-ERROR: Protocol violations or errors
-
-Vulnerability Report
-LOW: Minor issues requiring monitoring
-
-MEDIUM: Issues that should be addressed
-
-HIGH: Significant security concerns
-
-CRITICAL: Immediate action required
-
-🔒 Security Testing Scenarios
-GTP-Specific Tests
-Message Type Validation
-
-Verify supported GTP message types
-
-Detect unsupported or malformed messages
-
-Sequence Number Analysis
-
-Identify sequence number prediction attempts
-
-Detect replay attacks
-
-Tunnel Management
-
-Monitor PDP context creation/deletion
-
-Detect unauthorized tunnel establishment
-
-SCTP-Specific Tests
-Chunk Validation
-
-Verify chunk type and flag combinations
-
-Detect malformed chunk headers
-
-Association Security
-
-Monitor INIT chunk parameters
-
-Detect association hijacking attempts
-
-Flow Control Analysis
-
-Identify congestion control manipulation
-
-Detect resource exhaustion attacks
-
-💼 Use Cases
-Telecom Security Teams
-Pre-deployment Testing: Validate protocol implementations before production deployment
-
-Incident Response: Analyze suspicious network traffic during security incidents
-
-Compliance Auditing: Verify adherence to 3GPP security standards
-
-Penetration Testers
-Red Team Exercises: Identify vulnerabilities in telecom infrastructure
-
-Security Assessment: Comprehensive testing of GTP/SCTP implementations
-
-Network Engineers
-Protocol Debugging: Identify and troubleshoot protocol issues
-
-Performance Monitoring: Analyze protocol efficiency and reliability
-
-📊 Output and Reporting
+## 📊 Output and Reporting
 The application provides:
+- Real-time analysis logs with timestamps
+- Detailed vulnerability reports with severity ratings
+- Protocol statistics and risk assessment
+- Exportable results in JSON format
 
-Real-time analysis logs with timestamps
+## ⚠️ Limitations
+- **Simulation Mode**: Current implementation uses simulated data for demonstration
+- **Protocol Depth**: Focuses on GTP and SCTP; other telecom protocols not covered
+- **Performance**: For high-traffic environments, consider optimized C++ implementations
 
-Detailed vulnerability reports with severity ratings
+## 🔮 Future Enhancements
+- Integration with actual packet capture libraries (Scapy)
+- Support for additional telecom protocols (DIAMETER, SIP)
+- Automated exploit testing capabilities
+- Real-time traffic generation for testing
+- Cloud-based distributed analysis
 
-Protocol statistics and risk assessment
-
-Exportable results in JSON format
-
-⚠️ Limitations
-Simulation Mode: Current implementation uses simulated data for demonstration
-
-Protocol Depth: Focuses on GTP and SCTP; other telecom protocols not covered
-
-Performance: For high-traffic environments, consider optimized C++ implementations
-
-🔮 Future Enhancements
-Integration with actual packet capture libraries (Scapy)
-
-Support for additional telecom protocols (DIAMETER, SIP)
-
-Automated exploit testing capabilities
-
-Real-time traffic generation for testing
-
-Cloud-based distributed analysis
-
-⚠️ Security Disclaimer
+## ⚠️ Security Disclaimer
 This tool is intended for:
+- Authorized security testing
+- Educational purposes
+- Telecom infrastructure protection
 
-Authorized security testing
+**Always ensure you have proper authorization before testing any network infrastructure.**
 
-Educational purposes
-
-Telecom infrastructure protection
-
-Always ensure you have proper authorization before testing any network infrastructure.
-
-🤝 Contributing
+## 🤝 Contributing
 Feel free to extend this tool with:
+- Additional protocol support
+- Enhanced vulnerability detection
+- Improved GUI features
+- Performance optimizations
 
-Additional protocol support
-
-Enhanced vulnerability detection
-
-Improved GUI features
-
-Performance optimizations
-
-📞 Support
+## 📞 Support
 For issues, questions, or contributions, please use the GitHub repository:
 https://github.com/ltsali8220/telecom-protocol-analyzer.git
 
-text
+---
 
-## Key Additions Made:
+## Key Additions Made
 
 1. **Repository Section**: Added prominent GitHub URL at the top
 2. **Clone Instructions**: Included git clone commands for easy setup
@@ -231,7 +173,7 @@ text
 4. **Support Section**: Direct users to the GitHub repo for issues and contributions
 5. **Icons**: Used emojis for better visual organization (🚀 for features, 🛠 for installation, etc.)
 
-## Recommended Next Steps for Your Repository:
+## Recommended Next Steps for Your Repository
 
 1. **Create the repository** on GitHub with the name `telecom-protocol-analyzer`
 2. **Upload both files**:
@@ -241,4 +183,4 @@ text
 4. **Create tags** for version control
 5. **Add topics** to your repo like: `telecom-security`, `gtp`, `sctp`, `protocol-analyzer`, `cybersecurity`
 
-This will make your project look professional and demonstrate your practical skills in telecom security to potential employers!
+*This will make your project look professional and demonstrate your practical skills in telecom security to potential employers!*
