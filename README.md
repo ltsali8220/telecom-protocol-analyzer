@@ -164,23 +164,3 @@ For issues, questions, or contributions, please use the GitHub repository:
 https://github.com/ltsali8220/telecom-protocol-analyzer.git
 
 ---
-
-## Key Additions Made
-
-1. **Repository Section**: Added prominent GitHub URL at the top
-2. **Clone Instructions**: Included git clone commands for easy setup
-3. **Badges**: Added version, Python, and license badges for professional appearance
-4. **Support Section**: Direct users to the GitHub repo for issues and contributions
-5. **Icons**: Used emojis for better visual organization (🚀 for features, 🛠 for installation, etc.)
-
-## Recommended Next Steps for Your Repository
-
-1. **Create the repository** on GitHub with the name `telecom-protocol-analyzer`
-2. **Upload both files**:
-   - `telecom_protocol_analyzer.py`
-   - `README.md`
-3. **Add a license file** (recommend MIT License)
-4. **Create tags** for version control
-5. **Add topics** to your repo like: `telecom-security`, `gtp`, `sctp`, `protocol-analyzer`, `cybersecurity`
-
-*This will make your project look professional and demonstrate your practical skills in telecom security to potential employers!*
